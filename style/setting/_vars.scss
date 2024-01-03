@@ -1,0 +1,38 @@
+:root {
+  --pretendard: "Pretendard Variable", Pretendard, -apple-system, system-ui, Roboto, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  --montserrat: 'Montserrat', sans-serif;
+
+  --black: #111111;
+  --white: #FFFFFF;
+  --gray50: #FAFAFA;
+  --gray100: #F5F5F5;
+  --gray200: #EEEEEE;
+  --gray300: #E0E0E0;
+  --gray400: #BDBDBD;
+  --gray500: #9E9E9E;
+  --gray600: #757575;
+  --gray700: #616161;
+  --gray800: #424242;
+  --gray900: #212121;
+  
+  --background-gray: #FBFBFB;
+  --border-gray: #D9D9D9;
+
+  --blue: #0018FD;
+  --blue-middle: #4D7FFF;
+  --blue-lighten: #C7D7FF;
+
+  --blue-gradient: linear-gradient(290deg, var(--blue-lighten) 20.87%, var(--blue-middle) 57.44%, var(--blue) 98.02%);
+
+
+  --heading-1: 2.25rem; //36px
+  --heading-2: 1.875rem; //30px
+  --heading-3: 1.75rem; //28px
+  --heading-4: 1.5rem; //24px
+  --title-1: 1.25rem; //20px
+  --title-2: 1.125rem; //18px
+  --body-1: 1rem;
+  --body-2: 0.875rem; //14px
+  --body-3: 0.75rem; //12px
+  --body-4: 0.625rem; //10px
+}
