@@ -1,51 +1,56 @@
-const works = document.querySelector('.main__section.works');
-const worksTop =  works.getBoundingClientRect().top;
-const worksListUl = document.querySelector('.works-list__wrap');
-const workSection = document.querySelector(".main__section.works")
-const introMain = document.querySelector(".intro-main")
-const careerMain = document.querySelector(".main__section.career")
+const viewportHeight = window.innerHeight;
 
-const fullHeight = document.body.scrollHeight;
-window.addEventListener("scroll", () => {
-  if (worksTop < (fullHeight / 50)) {
-    // worksListUl.style.transform = `translate3d(${worksTop},0, 0)`
+const main = document.querySelector('main');
+
+const introSection = document.querySelector('.intro-section');
+const aboutSection = document.querySelector('.about-section');
+const skillSection = document.querySelector('.skill-section');
+const worksSection = document.querySelector('.works-section');
+const careerSection = document.querySelector('.career-section');
+
+const profileLeft = document.querySelectorAll('.profile-left');
+const worksItems = document.querySelectorAll('.works-grid a')
+const careerList = document.querySelector('.career-list')
+
+const aboutHeight = aboutSection.getBoundingClientRect().height;
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  // console.log(worksSection.getBoundingClientRect().top)
+  // console.log(aboutSection.getBoundingClientRect())
+  const innerEnd = scrollTop + window.innerHeight + 50 >= document.body.scrollHeight
+
+  if (aboutSection.getBoundingClientRect().top < 100 ) {
+    main.style.backgroundColor = '#7766e8'
+    //글씨 fade
+  } else {
+    main.style.backgroundColor = '#eff0f6'
   }
 
-  // console.log(worksListUl.getBoundingClientRect())
-  // console.log(window.innerHeight)
+  if (worksSection.getBoundingClientRect().top < 100 ) {
+    main.style.backgroundColor = '#eff0f6'
+    worksItems.forEach((item) => {
+      item.style.opacity = '1'
+      item.style.animation = 'scaleIn 1s ease-out'
+    })
+  } else {
+    worksItems.forEach((item) => {
+      item.style.opacity = '0'
+    })
+  }
 
+  if (careerSection.getBoundingClientRect().top < 100 ) {
+    main.style.backgroundColor = '#ddd'
+    careerList.addEventListener('wheel', () => {
+    })
 
-  // if (worksListUl.getBoundingClientRect().top < (window.innerHeight / 2)) {
-  //   const x = worksListUl.getBoundingClientRect().top -  (worksListUl.getBoundingClientRect().width/100)
-  //   // console.log('x: ', x);
-  //   worksListUl.style.transform = `translate3d(${x}vw, 0, 0)`
+  }
 
-  // }
-  // if (workSection.getBoundingClientRect().top <= 0) {
-  //   introMain.style.backgroundColor = 'rgb(0, 0, 0)'
-  // } else if (careerMain.getBoundingClientRect().top <= 0) {
-  //   introMain.style.backgroundColor = 'rgb(21, 142, 98)'
-  // } else {
-  //   introMain.style.backgroundColor = 'rgb(66, 36, 210)'
-  // }
+  // console.log('scrollTop: ', scrollTop, aboutSection.getBoundingClientRect().top, aboutSection.getBoundingClientRect().bottom);
+  if (scrollTop > aboutSection.getBoundingClientRect().top && scrollTop < aboutSection.getBoundingClientRect().bottom) {
+    profileLeft[0].style.transform = `translate3d(0px,${scrollTop -  innerHeight}px,0px)`
+  } else {
+    profileLeft[0].style.transform = `translate3d(0px,0px,0px)`
+  }
 
 })
-
-const introSection = document.querySelector(".main__section.intro")
-// introSection.style.backgroundColor = 'rgb(66, 36, 210)'
-
-// const observe = new IntersectionObserver((ele) => {
-//   console.log('ele: ', ele);
-//   ele.forEach((section) => {
-//     if (section.isIntersecting) {
-//       section.target.style.opacity = 1;
-//     }
-//   })
-// })
-// // observe.observe(introSection)
-
-// let section = document.querySelectorAll('section')
-// observe.observe(section[0])
-// observe.observe(section[1])
-// observe.observe(section[2])
-

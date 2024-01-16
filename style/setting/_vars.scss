@@ -1,6 +1,7 @@
 :root {
   --pretendard: "Pretendard Variable", Pretendard, -apple-system, system-ui, Roboto, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
   --montserrat: 'Montserrat', sans-serif;
+  --nunito: 'Nunito Sans', sans-serif;
 
   --black: #111111;
   --white: #FFFFFF;
@@ -21,6 +22,8 @@
   --blue: #0018FD;
   --blue-middle: #4D7FFF;
   --blue-lighten: #C7D7FF;
+  --violet: #7766e8;
+  --violet-bg: #eff0f6;
 
   --blue-gradient: linear-gradient(290deg, var(--blue-lighten) 20.87%, var(--blue-middle) 57.44%, var(--blue) 98.02%);
 
