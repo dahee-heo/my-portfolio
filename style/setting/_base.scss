@@ -64,7 +64,14 @@ p, div {
 
 a {
   text-decoration: none;
+  outline: none;
   color: var(--black);
+}
+a:hover, 
+a:active {
+  text-decoration: none; 
+  color:#fff; 
+  background-color: transparent;
 }
 
 main {

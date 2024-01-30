@@ -1,11 +1,12 @@
 const image = document.querySelector('.project-img')
+const topIn = document.querySelectorAll('.top-in')
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY <= 0) {
-    image.style.width = '100%'
-    image.style.height = '100vh'
-  } else if (window.scrollY > 1 && window.scrollY < window.innerHeight) {
-    console.log('window.scrollY: ', window.scrollY);
-    image.style.height = `${100 - window.scrollY}vh`
-  }
+  topIn.forEach((ele, idx) => {
+    ele.style.opacity = '0';
+    if (ele.getBoundingClientRect().top < window.innerHeight) {
+      ele.style.animation = `topIn 1s ease-out`;
+      ele.style.opacity = '1';
+    }
+  })
 })

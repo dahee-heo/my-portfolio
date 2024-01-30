@@ -1,11 +1,10 @@
 @import './setting/base';
 @import './setting/vars';
 @import './setting/fonts';
+@import './setting/keyframe';
 
 @import './components/header';
 @import './components/footer';
 
 @import './pages/index';
-@import './pages/main';
-@import './pages/about';
 @import './pages/projects';
