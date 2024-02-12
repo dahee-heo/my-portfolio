@@ -12,357 +12,455 @@
 
 <body>
   <main>
-    <header id="header"></header>
-    <nav id="nav"></nav>
-    <section class="intro-section">
-      <div class="intro-section__wrap">
-        <div class="intro-txt">
-          <div class="left-in">
-            Front-end
-            <span class="txt-obj obj1">Junior</span>
-            Developer
-          </div>
-          <div class="right-in">
-            <span class="txt-obj obj2">2023</span>
-            Portfolio
-          </div>
-        </div>
-        <div class="intro-bottom">
-          <p>
-            안녕하세요. 프론트엔드 신입 개발자 허다희입니다. <br />
-            수년간 웹, UI/UX디자이너를 하다가 프론트엔드로 전향하게 되었습니다. <br />
-            자세한 사항은 스크롤을 내려 확인해주세요.
-          </p>
-          <div class="scroll-down">
-            <div>
-              <img src="/assets/images/scroll_down.png" alt="">
-              <img src="/assets/svgs/down_arrow.svg" alt="">
+    <div class="main-wrap">
+      <header id="header"></header>
+      <div id="nav"></div>
+      <section class="intro-section">
+        <div class="intro-section__wrap">
+          <div class="intro-txt">
+            <div class="left-in">
+              Hello, This is
+            </div>
+            <div class="right-in">
+              Front-end Developer
+            </div>
+            <div class="left-in">
+              Portfolio
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-    
-    <section class="about-section">
-      <div class="about-section__wrap">
-        <div class="about-profile">
-          <div class="profile-left">
-            <div class="profile-img">
-              <img src="/assets/images/profile.jpeg" alt="">
-            </div>
-          </div>
-          <div class="profile-right">
-            <div class="section-tit">About Me</div>
-            <div class="about-txt top-in">
-              <div>
-                안녕하세요. 프론트엔드 개발자 허다희입니다.<br />
-                저는 10여년간 웹, UI/UX 디자이너를 하다가 자연스레 퍼블리싱에도 관심이 생겼고, 그러한 관심이 개발까지 이어지게 되었습니다.
-              </div>
-              <div>
-                개발을 공부해보니 데이터를 직접 운용하고 서비스를 구현하는 것에 매력을 느껴 직업 전향을 결심하게 되었습니다.
-              </div>
-              <div>
-                현재는 3개월의 인턴 경험을 비롯하여 외주 경험을 쌓으며 프론트엔드 개발자로 성장하기 위해 노력 중입니다.
-              </div>
-            </div>
+          <div class="intro-bottom">
+            <p>
+              안녕하세요. 프론트엔드 개발자 허다희입니다.<br />
+              UI/UX 디자이너를 했던 경험을 기반으로 더 나은 사용자 경험을 제공하는 개발자가 되려고 합니다. <br />
+              새로운 기술을 배우는 것을 좋아하며 꾸준한 성장을 지향합니다.
+            </p>
           </div>
         </div>
-    </section>
+      </section>
 
-    <section class="skill-section">
-      <div class="skill-section__wrap">
-        <div>
-          <div class="skill-left">
-            <div class="section-tit">Skill</div>
-            <div class="skill-cate">
-              <div>Front-end</div>
-              <div>Back-end</div>
-              <div>Etc</div>
+      <section class="works-section">
+        <div class="works-section__wrap">
+          <div class="section-tit">
+            <div>My Works</div>
+            <p>그동안 업무한 프로젝트 및 개인 프로젝트 입니다.</p>
+          </div>
+          <div class="works-grid">
+            <div class="works-left">
+              <div class="works-img"></div>
+              <div class="works-cate">
+                <div>ALL</div>
+                <div>NEXT</div>
+                <div>REACT</div>
+                <div>SVELTE</div>
+              </div>
+            </div>
+            <div class="works-right">
+              <!-- <a href="/pages/project1.html">
+                <div class="works-info">
+                  <div class="works-info-date">
+                    <div>Next</div>
+                    <div>2023.11</div>
+                  </div>
+                  <div class="works-info-name">Catch U Landing page</div>
+                  <div class="works-info-exp">랜덤박스 서비스 캐치유 랜딩페이지를 작업하였습니다.</div>
+                </div>
+              </a>
+              <a href="/pages/project2.html">
+                <div class="works-info">
+                  <div class="works-info-date">
+                    <div>Next</div>
+                    <div>2023.11</div>
+                  </div>
+                  <div class="works-info-name">With-PT</div>
+                  <div class="works-info-exp">트레이너와 회원간 커뮤니케이션 웹앱 서비스</div>
+                </div>
+              </a>
+              <a href="/pages/project3.html">
+                <div class="works-info">
+                  <div class="works-info-date">
+                    <div>Svelte kit</div>
+                    <div>2023.11</div>
+                  </div>
+                  <div class="works-info-name">Mnworks</div>
+                  <div class="works-info-exp">스틸시리즈 국내 총판 업체 mnworks의 공식 사이트 및 관리자 페이지</div>
+                </div>
+              </a>
+              <a href="/pages/project4.html">
+                <div class="works-info">
+                  <div class="works-info-date">
+                    <div>Svelte kit</div>
+                    <div>2023.11</div>
+                  </div>
+                  <div class="works-info-name">대전청인설비공사</div>
+                  <div class="works-info-exp">누수공사 전문업체인 대전청인설비공사의의 공식 사이트 및 관리자 페이지</div>
+                </div>
+              </a>
+              <a href="/pages/project5.html">
+                <div class="works-info">
+                  <div class="works-info-date">
+                    <div>Next</div>
+                    <div>2023.11</div>
+                  </div>
+                  <div class="works-info-name">Geoinfotech</div>
+                  <div class="works-info-exp">마이크로 킥보드 한국 공식 수입사 지오인포테크의 정품등록 페이지</div>
+                </div>
+              </a>
+              <a href="/pages/project6.html">
+                <div class="works-info">
+                  <div class="works-info-date">
+                    <div>React</div>
+                    <div>2023.11</div>
+                  </div>
+                  <div class="works-info-name">LG My-car alram service</div>
+                  <div class="works-info-exp">TV - 차량 기기 연동 모바일 웹앱 서비스</div>
+                </div>
+              </a>
+              <a href="/pages/project7.html">
+                <div class="works-info">
+                  <div class="works-info-date">
+                    <div>React</div>
+                    <div>2023.11</div>
+                  </div>
+                  <div class="works-info-name">Stamp</div>
+                  <div class="works-info-exp">직원 출결관리 서비스의 직원용 페이지 및 관리자용 페이지</div>
+                </div>
+              </a>
+              <a href="/pages/project8.html">
+                <div class="works-info">
+                  <div class="works-info-date">
+                    <div>React</div>
+                    <div>2023.11</div>
+                  </div>
+                  <div class="works-info-name">Cat-expiry</div>
+                  <div class="works-info-exp">고양이 식료품 유통기한 관리 서비스</div>
+                </div>
+              </a> -->
+
             </div>
           </div>
-          <div class="skill-right">
-            <div>
-              <div class="skill-item top-in">
-                <div class="skill-name">HTML/CSS</div>
-                <div class="skill-grade"><span>4</span>/5</div>
-                <ul class="skill-exp">
-                  <li>태그, 속성, 시맨틱 태그 이해 및 사용</li>
-                  <li>반응형 퍼블리싱 가능</li>
-                  <li>mixin, variables, root 사용</li>
-                  <li>Sass(SCSS)와 같은 CSS 전처리기 능숙하게 사용</li>
-                </ul>
+        </div>
+      </section>
+
+
+      <section class="skill-section">
+        <div class="skill-section__wrap">
+          <div class="section-tit">
+            <div>Skills</div>
+            <p>익숙하게 사용할 수 있거나 사용해 본 경험이 있는 스킬들 입니다.</p>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item top-in">
+              <div>
+                <div class="skill-name">HTML</div>
+                <div class="skill-degree"><span>중급</span></div>
               </div>
-              <div class="skill-item top-in">
+              <ul class="skill-exp">
+                <li>태그, 속성, 시맨틱 태그 이해 및 사용</li>
+                <li>Grid, Flex 사용 가능</li>
+                <li>웹표준, 웹접근성에 대한 이해</li>
+              </ul>
+            </div>
+            <div class="skill-item top-in">
+              <div>
+                <div class="skill-name">CSS</div>
+                <div class="skill-degree"><span>중급</span></div>
+              </div>
+              <ul class="skill-exp">
+                <li>Media query를 이용한 반응형 퍼블리싱 가능</li>
+                <li>박스모델에 대한 이해</li>
+                <li>Sass(SCSS)와 같은 CSS 전처리기 사용 가능</li>
+              </ul>
+            </div>
+            <div class="skill-item top-in">
+              <div>
                 <div class="skill-name">Javascript / Typescript</div>
-                <div class="skill-grade"><span>4</span>/5</div>
-                <ul class="skill-exp">
-                  <li>ES6 문법 이해 및 사용</li>
-                  <li>브라우저 동작 원리 이해</li>
-                  <li>기본 자료 구조 및 알고리즘 구현</li>
-                  <li>Typescript의 기초 문법 사용 가능</li>
-                </ul>
+                <div class="skill-degree"><span>중급</span></div>
               </div>
-              <div class="skill-item top-in">
+              <ul class="skill-exp">
+                <li>ES6 문법 이해 및 사용</li>
+                <li>브라우저 동작 원리 이해</li>
+                <li>기본 자료 구조 및 알고리즘 구현</li>
+                <li>Typescript의 기초 문법 사용 가능</li>
+              </ul>
+            </div>
+            <div class="skill-item top-in">
+              <div>
                 <div class="skill-name">React/Next</div>
-                <div class="skill-grade"><span>4</span>/5</div>
-                <ul class="skill-exp">
-                  <li>함수형 컴포넌트 사용</li>
-                  <li>기본적인 hooks를 이해하고 능숙하게 사용</li>
-                  <li>Redux toolkit, Recoil을 활용한 상태관리</li>
-                  <li>server component 사용 가능</li>
-                </ul>
+                <div class="skill-degree"><span>중급</span></div>
               </div>
-              <div class="skill-item top-in">
+              <ul class="skill-exp">
+                <li>함수형 컴포넌트 사용</li>
+                <li>기본적인 hooks를 이해하고 능숙하게 사용</li>
+                <li>Redux toolkit, Recoil을 활용한 상태관리</li>
+                <li>server component 사용 가능</li>
+              </ul>
+            </div>
+            <div class="skill-item top-in">
+              <div>
                 <div class="skill-name">Svelte-kit</div>
-                <div class="skill-grade"><span>4</span>/5</div>
-                <ul class="skill-exp">
-                  <li>기본 문법 및 반응성 등을 이해하고 사용</li>
-                  <li>server component 사용 가능</li>
-                </ul>
+                <div class="skill-degree"><span>중급</span></div>
               </div>
-              <!-- </div>
-            <div> -->
-              <div class="skill-item top-in">
+              <ul class="skill-exp">
+                <li>기본 문법 및 반응성 등을 이해하고 사용</li>
+                <li>server component 사용 가능</li>
+              </ul>
+            </div>
+            <div class="skill-item top-in">
+              <div>
+                <div class="skill-name">Styled-component</div>
+                <div class="skill-degree"><span>중급</span></div>
+              </div>
+              <ul class="skill-exp">
+                <li>프로젝트 구현 경험</li>
+                <li>props를 이용한 동적 스타일링 가능</li>
+              </ul>
+            </div>
+            <div class="skill-item top-in">
+              <div>
+                <div class="skill-name">axios</div>
+                <div class="skill-degree"><span>중급</span></div>
+              </div>
+              <ul class="skill-exp">
+                <li>rest 메소드 이해 및 활용 가능</li>
+                <li>인스턴스 생성하여 헤더 설정 경험</li>
+                <li>통신 요청, 응답 미들웨어 사용 경험</li>
+              </ul>
+            </div>
+            <div class="skill-item top-in">
+              <div>
                 <div class="skill-name">Node</div>
-                <div class="skill-grade"><span>3</span>/5</div>
-                <ul class="skill-exp">
-                  <li>기초 문법을 이해하고 사용</li>
-                  <li>Express 프레임워크 사용 경험</li>
-                  <li>라이브러리를 통한 Mysql 연동 경험</li>
-                  <li>MongoDB 연동 가능</li>
-                </ul>
+                <div class="skill-degree"><span>초급</span></div>
               </div>
-              <div class="skill-item top-in">
-                <div class="skill-name">Mysql</div>
-                <div class="skill-grade"><span>2</span>/5</div>
-                <ul class="skill-exp">
-                  <li>기본적인 쿼리문 작성 가능</li>
-                </ul>
+              <ul class="skill-exp">
+                <li>기초 문법을 이해하고 사용</li>
+                <li>Express 프레임워크 사용 경험</li>
+              </ul>
+            </div>
+            <div class="skill-item top-in">
+              <div>
+                <div class="skill-name">Mysql/MongoDB</div>
+                <div class="skill-degree"><span>초급</span></div>
               </div>
+              <ul class="skill-exp">
+                <li>라이브러리를 통한 연동 경험</li>
+                <li>기본적인 쿼리문 작성 경험</li>
+              </ul>
+            </div>
+            <div class="skill-item top-in">
+              <div>
+                <div class="skill-name">Adobe Photoshop</div>
+                <!-- <div class="skill-degree"><span>고급</span></div> -->
+              </div>
+              <!-- <ul class="skill-exp">
+                  <li></li>
+                </ul> -->
+            </div>
+            <div class="skill-item top-in">
+              <div>
+                <div class="skill-name">Adobe Illustrator</div>
+                <!-- <div class="skill-degree"><span>고급</span></div> -->
+              </div>
+              <!-- <ul class="skill-exp">
+                  <li></li>
+                </ul> -->
+            </div>
+            <div class="skill-item top-in">
+              <div>
+                <div class="skill-name">Figma</div>
+                <!-- <div class="skill-degree"><span>중급</span></div> -->
+              </div>
+              <!-- <ul class="skill-exp">
+                  <li>컴포넌트 사용</li>
+                </ul> -->
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="works-section">
-      <div class="works-section__wrap">
-        <div class="works-grid">
-          <div class="works-txt">
-            <div>
-              <div>Works</div>
-              <div><img src="" alt=""></div>
+      </section>
+
+      <section class="about-section">
+        <div class="about-section__wrap">
+          <div class="section-tit">
+            <div>About Me</div>
+            <!-- <p>asdfafd</p> -->
+          </div>
+          <div class="about-profile">
+            <div class="profile-left">
+              <div class="profile-img">
+                <img src="/assets/images/profile.jpeg" alt="">
+              </div>
+            </div>
+            <div class="profile-right">
+              <div class="about-txt top-in">
+                <div>
+                  안녕하세요. 프론트엔드 개발자 허다희입니다.
+                </div>
+                <div>
+                  저는 10여년간 웹, UI/UX 디자이너를 하다가 자연스레 퍼블리싱에도 관심이 생겼고, 그러한 관심이 개발까지 이어지게 되었습니다.
+                </div>
+                <div>
+                  개발을 공부해보니 직접 서비스를 구현하는 것에 큰 매력을 느껴 직업 전향을 결심하게 되었습니다.
+                </div>
+                <div>
+                  현재는 3개월의 인턴 경험을 비롯하여 외주 경험을 쌓으며 프론트엔드 개발자로 성장하기 위해 노력 중입니다.
+                </div>
+              </div>
             </div>
           </div>
-          <a href="/pages/project1.html">
+          <div class="about-contact">
             <div>
-              <div class="works-name">Catch U Landing page</div>
-              <div class="works-exp">랜덤박스 서비스 캐치유 랜딩페이지</div>
+              <div class="contact-tit">Email</div>
+              <div class="contact-con">hdahee.9@gmail.com</div>
             </div>
-          </a>
-          <a href="/pages/project2.html">
             <div>
-              <div class="works-name">With-PT</div>
-              <div class="works-exp">트레이너와 회원간 커뮤니케이션 웹앱 서비스</div>
+              <div class="contact-tit">Phone</div>
+              <div class="contact-con">010-9579-6649</div>
             </div>
-          </a>
-          <a href="/pages/project3.html">
             <div>
-              <div class="works-name">Mnworks</div>
-              <div class="works-exp">스틸시리즈 국내 총판 업체 mnworks의 공식 사이트 및 관리자 페이지</div>
+              <div class="contact-tit">link</div>
+              <div class="contact-con">
+                <a href="" class="reverse-txt" data-hover="Blog">
+                  <div>Blog</div>
+                </a>
+                <a href="" class="reverse-txt" data-hover="Github">
+                  <div>Github</div>
+                </a>
+              </div>
             </div>
-          </a>
-          <a href="/pages/project4.html">
-            <div>
-              <div class="works-name">대전청인설비공사</div>
-              <div class="works-exp">누수공사 전문업체인 대전청인설비공사의의 공식 사이트 및 관리자 페이지</div>
-            </div>
-          </a>
-          <a href="/pages/project5.html">
-            <div>
-              <div class="works-name">Geoinfotech</div>
-              <div class="works-exp">마이크로 킥보드 한국 공식 수입사 지오인포테크의 정품등록 페이지</div>
-            </div>
-          </a>
-          <a href="/pages/project6.html">
-            <div>
-              <div class="works-name">LG My-car alram service</div>
-              <div class="works-exp">TV - 차량 기기 연동 모바일 웹앱 서비스</div>
-            </div>
-          </a>
-          <a href="/pages/project7.html">
-            <div>
-              <div class="works-name">Stamp</div>
-              <div class="works-exp">직원 출결관리 서비스의 직원용 페이지 및 관리자용 페이지</div>
-            </div>
-          </a>
-          <a href="/pages/project8.html">
-            <div>
-              <div class="works-name">Cat-expiry</div>
-              <div class="works-exp">=고양이 식료품 유통기한 관리 서비스</div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div>
-        <div>career<span></span>experience<span></span>education</div>
-        <div></div>
-      </div>
-    </section>
-    <section class="career-section">
-      <div class="career-section__wrap">
-        <div class="career-container">
-          <ul class="career-list">
-            <li class="career-list-item top-in">
-              <div>
-                <div class="career-info">
-                  <div>2023. 11 ~ 2023. 12 <span class="period-badge badge">3개월</span> <span
-                      class="work-badge badge">프리랜서</span></div>
-                  <div>KLP</div>
-                </div>
-              </div>
-              <div class="career-exp">
-                <p>
-                  랜덤박스 서비스 캐치유의 랜딩페이지를 제작하였습니다. <br />
-                  프론트엔드 업무 및 실시간 데이터를 조회하는 server 개발 업무를 하였습니다.
-                </p>
-              </div>
-            </li>
-            <li class="career-list-item top-in">
-              <div>
-                <div class="career-info">
-                  <div>2023. 06 ~ 2023. 09 <span class="period-badge badge">3개월</span> <span
-                      class="work-badge badge">인턴</span></div>
-                  <div>Work6</div>
-                </div>
-              </div>
-              <div class="career-exp">
-                <p>
-                  솔루션 및 웹사이트 제작 에이전시에서 3개월 인턴으로 프론트엔드 및 백엔드 업무를 하였습니다. <br />
-                  고객사의 의뢰를 받아 공식 사이트 및 어드민 사이트를 제작하였습니다.
-                </p>
-              </div>
-            </li>
-            <li class="career-list-item top-in">
-              <div>
-                <div class="career-info">
-                  <div>2023. 01 ~ 2023. 03 <span class="period-badge badge">3개월</span> </div>
-                  <div>Hyconsoft</div>
-                </div>
-              </div>
-              <div class="career-exp">
-                <p>
-                  모빌리티 서비스 개발 회사에서 프론트엔드 업무를 하였습니다.<br />
-                  블랙박스 기기와 TV, 어드민 사이트를 연동하는 모바일용 웹앱 서비스 개발에 참여하였습니다.
-                </p>
-              </div>
-            </li>
-            <li class="career-list-item top-in">
-              <div>
-                <div class="career-info">
-                  <div>2021. 03 ~ 2022. 05 <span class="period-badge badge">1년 2개월</span> </div>
-                  <div>Fitsoft</div>
-                </div>
-              </div>
-              <div class="career-exp active">
-                <p>
-                  웹 에이전시에서 UI/UX 디자인 업무를 하였습니다.<br />
-                  고객사의 의뢰를 받아 쇼핑몰 및 어드민 사이트의 UI/UX, 콘텐츠 디자인을 하였습니다
-                </p>
-              </div>
-            </li>
-            <li class="career-list-item top-in">
-              <div>
-                <div class="career-info">
-                  <div>2017. 06 ~ 2020. 06 <span class="period-badge badge">3년</span> </div>
-                  <div>해찬무역</div>
-                </div>
-              </div>
-              <div class="career-exp active">
-                <p>
-                  여행용품 쇼핑몰에서 웹 디자인 업무를 하였습니다.<br />
-                  콘텐츠 디자인과 카페24 쇼핑몰의 간단한 퍼블리싱 유지보수를 하였습니다.
-                </p>
-              </div>
-            </li>
-            <li class="career-list-item top-in">
-              <div>
-                <div class="career-info">
-                  <div>2015. 10 ~ 2017. 05 <span class="period-badge badge">1년 7개월</span> </div>
-                  <div>트랜드메카</div>
-                </div>
-              </div>
-              <div class="career-exp active">
-                <p>
-                  시계 쇼핑몰에서 웹 디자인 업무를 하였습니다.<br />
-                  콘텐츠 디자인 및 사진 보정과 카페24 쇼핑몰의 간단한 퍼블리싱 유지보수를 하였습니다.
-                </p>
-              </div>
-            </li>
-            <li class="career-list-item top-in">
-              <div>
-                <div class="career-info">
-                  <div>2011. 06 ~ 2013. 05 <span class="period-badge badge">2년</span> </div>
-                  <div>카민디자인</div>
-                </div>
-              </div>
-              <div class="career-exp active">
-                <p>
-                  실내 인테리어 회사에서 웹 디자인 업무를 하였습니다.<br />
-                  콘텐츠 디자인 및 사진 보정과 사무보조 업무를 하였습니다.
-                </p>
-              </div>
-            </li>
-            <li class="career-list-item education top-in">
-              <div>
-                <div class="career-info">
-                  <div>2017. 03 ~ 2021. 02 <span class="period-badge badge">졸업</span> </div>
-                  <div>홍익대학교 디자인경영융합학부</div>
-                </div>
-              </div>
-              <div class="career-exp active">
-                <p>
-                  실내 인테리어 회사에서 웹 디자인 업무를 하였습니다.<br />
-                  콘텐츠 디자인 및 사진 보정과 사무보조 업무를 하였습니다.
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <section class="contact-section">
-      <div class="contact-section__wrap">
-        <div class="contact-top">
-          <div>Thank you <br /> for your visit</div>
-        </div>
-        <div class="contact-bottom">
-          <div>
-            <div class="contact-tit">Email</div>
-            <div class="contact-con">hdahee.9@gmail.com</div>
           </div>
-          <div>
-            <div class="contact-tit">Phone</div>
-            <div class="contact-con">010-9579-6649</div>
+      </section>
+
+
+
+      <section>
+      </section>
+      <section class="career-section">
+        <div class="career-section__wrap">
+          <div class="section-tit">
+            <div>Experience</div>
+            <p>그동안의 업무 경력들 및 교육과정 입니다.</p>
           </div>
-          <div>
-            <div class="contact-tit">link</div>
-            <div class="contact-con">
-              <a href="" class="reverse-txt" data-hover="Blog">
-                <div>Blog</div>
-              </a>
-              <a href="" class="reverse-txt" data-hover="Github">
-                <div>Github</div>
-              </a>
+          <div class="career-container">
+            <div class="horizontal">
+              <ul class="career-list">
+                <li class="career-list-item top-in">
+                  <div>
+                    <div class="career-info">
+                      <div>2023. 11 ~ 2023. 12 <span class="period-badge badge">3개월</span> <span
+                          class="work-badge badge">프리랜서</span></div>
+                      <div>KLP</div>
+                    </div>
+                  </div>
+                  <div class="career-exp">
+                    <p>
+                      랜덤박스 서비스 캐치유의 랜딩페이지를 제작하였습니다. <br />
+                      프론트엔드 업무 및 실시간 데이터를 조회하는 server 개발 업무를 하였습니다.
+                    </p>
+                  </div>
+                </li>
+                <li class="career-list-item top-in">
+                  <div>
+                    <div class="career-info">
+                      <div>2023. 06 ~ 2023. 09 <span class="period-badge badge">3개월</span> <span
+                          class="work-badge badge">인턴</span></div>
+                      <div>Work6</div>
+                    </div>
+                  </div>
+                  <div class="career-exp">
+                    <p>
+                      솔루션 및 웹사이트 제작 에이전시에서 3개월 인턴으로 프론트엔드 및 백엔드 업무를 하였습니다. <br />
+                      고객사의 의뢰를 받아 공식 사이트 및 어드민 사이트를 제작하였습니다.
+                    </p>
+                  </div>
+                </li>
+                <li class="career-list-item top-in">
+                  <div>
+                    <div class="career-info">
+                      <div>2023. 01 ~ 2023. 03 <span class="period-badge badge">3개월</span> </div>
+                      <div>Hyconsoft</div>
+                    </div>
+                  </div>
+                  <div class="career-exp">
+                    <p>
+                      모빌리티 서비스 개발 회사에서 프론트엔드 업무를 하였습니다.<br />
+                      블랙박스 기기와 TV, 어드민 사이트를 연동하는 모바일용 웹앱 서비스 개발에 참여하였습니다.
+                    </p>
+                  </div>
+                </li>
+                <li class="career-list-item top-in">
+                  <div>
+                    <div class="career-info">
+                      <div>2021. 03 ~ 2022. 05 <span class="period-badge badge">1년 2개월</span> </div>
+                      <div>Fitsoft</div>
+                    </div>
+                  </div>
+                  <div class="career-exp active">
+                    <p>
+                      웹 에이전시에서 UI/UX 디자인 업무를 하였습니다.<br />
+                      고객사의 의뢰를 받아 쇼핑몰 및 어드민 사이트의 UI/UX, 콘텐츠 디자인을 하였습니다
+                    </p>
+                  </div>
+                </li>
+                <li class="career-list-item top-in">
+                  <div>
+                    <div class="career-info">
+                      <div>2017. 06 ~ 2020. 06 <span class="period-badge badge">3년</span> </div>
+                      <div>해찬무역</div>
+                    </div>
+                  </div>
+                  <div class="career-exp active">
+                    <p>
+                      여행용품 쇼핑몰에서 웹 디자인 업무를 하였습니다.<br />
+                      콘텐츠 디자인과 카페24 쇼핑몰의 간단한 퍼블리싱 유지보수를 하였습니다.
+                    </p>
+                  </div>
+                </li>
+                <li class="career-list-item top-in">
+                  <div>
+                    <div class="career-info">
+                      <div>2015. 10 ~ 2017. 05 <span class="period-badge badge">1년 7개월</span> </div>
+                      <div>트랜드메카</div>
+                    </div>
+                  </div>
+                  <div class="career-exp active">
+                    <p>
+                      시계 쇼핑몰에서 웹 디자인 업무를 하였습니다.<br />
+                      콘텐츠 디자인 및 사진 보정과 카페24 쇼핑몰의 간단한 퍼블리싱 유지보수를 하였습니다.
+                    </p>
+                  </div>
+                </li>
+                <li class="career-list-item top-in">
+                  <div>
+                    <div class="career-info">
+                      <div>2011. 06 ~ 2013. 05 <span class="period-badge badge">2년</span> </div>
+                      <div>카민디자인</div>
+                    </div>
+                  </div>
+                  <div class="career-exp active">
+                    <p>
+                      실내 인테리어 회사에서 웹 디자인 업무를 하였습니다.<br />
+                      콘텐츠 디자인 및 사진 보정과 사무보조 업무를 하였습니다.
+                    </p>
+                  </div>
+                </li>
+                <li class="career-list-item top-in education">
+                  <div>
+                    <div class="career-info">
+                      <div>2017. 03 ~ 2021. 02 <span class="period-badge badge">졸업</span> </div>
+                      <div>홍익대학교 디자인경영융합학부 졸업</div>
+                    </div>
+                  </div>
+                  <div class="career-exp active">
+                    <p>
+                      경영, 디자인, 공학, 법 등의 소양이 요구되는 산업분야의 실무전문가가 되기 위한 역량개발을 위해 교육 하는 학부입니다.
+                    </p>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-        <!-- <div class="copyright">
-          © 2023. Heo Dahee. All Rights Reserved.
-        </div> -->
-      </div>
-    </section>
+      </section>
+    </div>
   </main>
   <div class="more-cursor">
     <div>View</div>

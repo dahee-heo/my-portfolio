@@ -6,7 +6,7 @@ header {
   right: 1rem;
   background-color: var(--white);
   border-radius: 50%;
-  z-index: 50;
+  z-index: 200;
   cursor: pointer;
   
   > div {
@@ -29,15 +29,30 @@ header {
       display: block;
       background-color: var(--black);
       position: absolute;
+      transition: transform 0.5s ease-in-out;
       &:nth-child(1) {
         top: 25%;
+        will-change: transform;
+        // transform: rotate(0) translate3d(0, 0, 0);
       }
       &:nth-child(2) {
         top: 50%;
+        transition: opacity 0.5s ease-out;
       }
       &:nth-child(3) {
         top: 75%;
+        will-change: transform;
+        // transform: rotate(0) translate3d(0, 0, 0);
       }
     }
+  }
+}
+
+@keyframes menu {
+  from {
+
+  }
+  to {
+
   }
 }

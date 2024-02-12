@@ -1,5 +1,5 @@
 .project-main {
-  background-color: var(--black);
+  // background-color: var(--black);
   width: 100%;
   height: 100%;
 }
@@ -7,29 +7,127 @@
 .project-wrap {
   width: 100%;
   height: 100%;
+}
+
+.project-img {
+  width: 100%;
+  height: 20rem;
+  border-radius: var(--box-radius);
+  background-color: var(--white);
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.project-con {
   display: flex;
-  padding: var(--gap);
+  padding: var(--gap) 0;
   gap: var(--gap);
 }
+
 .project-left {
-  width: 100%;
+  width: 40%;
   height: calc(100vh - var(--gap) * 2);
   top: var(--gap);
   position: sticky;
 }
 
 .project-right {
-  width: 100%;
+  width: 60%;
   height: 100%;
   
   > div {
     width: 100%;
     height: 100%;
-    background-color: var(--bg);
-    border-radius: var(--grid-radius);
   }
 }
 
+.project-detail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.project-date {
+  width: 100%;
+  background-color: var(--white);
+  border-radius: var(--box-radius);
+  padding: 1.25rem 2rem;
+  font-size: var(--font-body1);
+  font-family: var(--nunito);
+  display: flex;
+  gap: var(--gap);
+  align-items: center;
+
+  span {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url('/assets/svgs/icon_calendar.svg') no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+.link-btn {
+  
+  a {
+    outline: none;
+  }
+  
+  button {
+    width: 100%;
+    padding: 1.25rem 2rem;
+    border-radius: 2rem;
+    font-size: var(--font-body1);
+    cursor: pointer;
+    
+  }
+  .web-link {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--primary-purple);
+    color: var(--white);
+    z-index: 1;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+    }
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background-color: var(--violet-darken);
+      transition: all .3s;
+      border-radius: 10rem;
+      z-index: -1;
+    }
+
+    &:hover {
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+  .github-link {
+    border: 1px solid var(--black);
+  }
+
+}
 .project__section.list {
   width: 100%;
   > div {
@@ -52,7 +150,6 @@
 
 .project-li__wrap {
   width: 100%;
-  // padding: 0 20%;
   margin-top: 5rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -83,22 +180,19 @@
 }
 .project-info {
   width: 100%;
-  padding: 5rem 10%;
-  border-bottom: 1px solid var(--border-gray);
+  padding: 4rem 3rem;
+  background-color: var(--white);
+  border-radius: var(--box-radius);
+  margin-bottom: var(--gap);
 
   h2 {
-    font-size: var(--heading-1);
-    font-weight: 800;
-
+    font-size: var(--font-title);
+    font-weight: var(--font-bold);
   }
 
   > div:nth-child(2) {
     width: 100%;
-    // display: flex;
-    gap: 1rem;
-    justify-content: space-between;
     margin-top: 2.5rem;
-
   }
   
   .info-detail {
@@ -106,8 +200,11 @@
   }
   
   .info-txt {
-    // width: 60%;
+    font-size: var(--font-body1);
     line-height: 1.75;
+    word-break: keep-all;
+    font-weight: var(--font-thin);
+    margin-bottom: 2rem;
   }
 
   @media (max-width: 960px) {
@@ -124,7 +221,7 @@
   .info-skill,
   .info-role {
     display: flex;
-    font-size: var(--title-1);
+    font-size: var(--font-body1);
     font-weight: 200;
     margin-bottom: 0.75rem;
     
@@ -134,97 +231,41 @@
     }
   }
   
-  .info-txt {
-    font-size: var(--title-1);
-    font-weight: 200;
-    word-break: keep-all;
-  }
-
-  .link-btn {
-    margin-top: 2.5rem;
-    
-    a {
-      outline: none;
-    }
-    
-    button {
-      padding: 0.875rem 2rem 0.75rem;
-      border-radius: 2rem;
-      font-size: var(--title-1);
-      cursor: pointer;
-      
-    }
-    .web-link {
-      position: relative;
-      overflow: hidden;
-      background-color: var(--primary-purple);
-      color: var(--white);
-      z-index: 1;
-
-      &::before {
-        content: '';
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -2;
-      }
-      &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0%;
-        height: 100%;
-        background-color: var(--violet-darken);
-        transition: all .3s;
-        border-radius: 10rem;
-        z-index: -1;
-      }
-
-      &:hover {
-
-        &::after {
-          width: 100%;
-        }
-      }
-    }
-    .github-link {
-      border: 1px solid var(--black);
-    }
-
-  }
 }
 
-.project-con {
+.project-exp {
   width: 100%;
 
   > div {
     width: 100%;
-    padding: 10%;
+    padding: 4rem 3rem;
+    background-color: var(--white);
+    border-radius: var(--box-radius);
+    &:not(:last-child) {
+      margin-bottom: var(--gap);
+    }
   }
 
   h3 {
-    font-size: var(--heading-2);
-    font-weight: 700;
+    font-size: var(--font-title);
+    font-weight: var(--font-bold);
     margin-bottom: 2rem;
   }
   
   .dev-part {
     font-size: var(--title-1);
-    font-weight: 600;
+    font-weight: var(--font-bold);
     color: var(--primary-purple);
     margin-bottom: 1.5rem;
   }
   
   .dev-item {
-    margin-bottom: 2rem;
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }  
     > div {
-      font-size: var(--title-1);
-      font-weight: 700;
+      font-size: var(--font-body1);
+      font-weight: var(--font-bold);
       position: relative;
       padding-left: 0.75rem;
       margin-bottom: 0.5rem;
@@ -248,7 +289,7 @@
       margin-top: 1rem;
       position: relative;
       word-break: keep-all;
-      font-size: var(--title-1);
+      font-size: var(--font-body1);
       font-weight: 300;
       &::before {
         content: "";

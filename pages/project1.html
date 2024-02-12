@@ -6,119 +6,134 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style/style.css">
   <script defer src="/script/projects.js"></script>
+  <script defer src="/script/components/header.js"></script>
   <title>Heo dahee - project</title>
 </head>
 
 <body>
   <main class="project-main">
-    <header></header>
-    <div class="project-wrap">
-      <section class="project-left">
-        <div class="project-img">사진?</div>
-      </section>
-      <section class="project-right detail__section exp">
-        <div>
-          <div class="project-info">
-            <div class="info-name">
-              <h2>Catch U Landing Page</h2>
-            </div>
-            <div>
-              <div class="info-detail">
-                <div class="info-date">
-                  <div>Date</div>
-                  <div>2023. 11 ~ 2023. 12</div>
-                </div>
-                <div class="info-skill">
-                  <div>Skill</div>
-                  <div>Next, Context API, SCSS, Tailwind CSS</div>
-                </div>
-                <div class="info-role">
-                  <div>Role</div>
-                  <div>Front-end, back-end, UI/UX design</div>
-                </div>
+    <div class="main-wrap">
+      <header id="header"></header>
+      <div id="nav"></div>
+      <div class="project-wrap">
+        <section class="project-img">
+          <img
+            src="https://images.pexels.com/photos/533446/pexels-photo-533446.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="">
+        </section>
+        <section class="project-con">
+          <div class="project-left">
+            <div class="project-detail">
+              <div class="project-date">
+                <span></span>
+                <div>2023. 11 - 12</div>
               </div>
-              <div class="info-txt">
-                <p>
-                  랜덤박스 어플 캐치유 랜딩페이지를 의뢰받아 제작하였습니다.<br />
-                  전체 페이지 UI/UX 디자인을 비롯하여 전체 페이지의 클라이언트 구현과
-                  메인의 live 당첨 데이터를 불러오는 서버 구현을 진행하였습니다.
-                </p>
-              </div>
-            </div>
-            <div class="link-btn">
-              <a href="https://catchu.kr/">
-                <button class="web-link">Web Site</button>
-              </a>
-              <!-- <a href=""><button class="github-link">Github</button></a> -->
-            </div>
-          </div>
-          <div class="project-con">
-            <div>
-              <h3>프론트엔드 개발</h3>
-              <!-- <div class="dev-part">랜딩페이지</div> -->
-              <div class="dev-item top-in">
-                <div>모바일 최적화 UI 개발</div>
-                <ul>
-                  <li>Tailwind와 SCSS를 활용하여 UI 개발</li>
-                  <li>CSS 애니메이션을 활용하여 메인 페이지의 튜토리얼 형식 구현</li>
-                </ul>
-              </div>
-              <div class="dev-item top-in">
-                <div>메인 페이지 구현</div>
-                <ul>
-                  <li>Api를 통해 데이터 불러오는 기능 구현</li>
-                  <li>정품 이미지 더보기 기능 구현</li>
-                </ul>
-              </div>
-              <div class="dev-item top-in">
-                <div>서브 페이지 구현</div>
-                <ul>
-                  <li>채용, contact 페이지 폼 전송 기능 구현</li>
-                  <li>API를 통해 데이터 불러오는 기능 구현</li>
-                </ul>
-              </div>
-              </div>
-              <div>
-              <h3>백엔드 개발</h3>
-              <!-- <div class="dev-part">랜딩페이지</div> -->
-              <div class="dev-item top-in">
-                <div>Live 데이터 불러오는 API 구현</div>
-                <ul>
-                  <li>Mysql2 라이브러리를 활용하여 API 구현</li>
-                </ul>
-              </div>
-            </div>
-            <div>
-              <h3>얻게된 점</h3>
-              <div class="dev-item top-in">
-                <div>배포 환경에서의 Timezone 차이</div>
-                <ul>
-                  <li>
-                    live 데이터를 시간에 따라 몇 분, 몇 시간 전에 당첨된 건지 보여줘야 했는데, 
-                    로컬에서 실행시 문제가 없었으나 배포하고 나니 시간이 이상하게 출력 되는 현상이 있었습니다.
-                    KST가 UTC와 9시간 차이 난다는 것은 알고 있었지만 로컬과 배포 환경이 다르다는 것을 
-                    알게되어 수정하였습니다.
-                  </li>
-                </ul>
-              </div>
-              <div class="dev-item top-in">
-                <div>Image 최적화</div>
-                <ul>
-                  <li>
-                    live 데이터를 시간에 따라 몇 분, 몇 시간 전에 당첨된 건지 보여줘야 했는데, 
-                    로컬에서 실행시 문제가 없었으나 배포하고 나니 시간이 이상하게 출력 되는 현상이 있었습니다.
-                    KST가 UTC와 9시간 차이 난다는 것은 알고 있었지만 로컬과 배포 환경이 다르다는 것을 
-                    알게되어 수정하였습니다.
-                  </li>
-                </ul>
+              <div class="link-btn">
+                <a href="https://catchu.kr/">
+                  <button class="web-link">WEB SITE</button>
+                </a>
+                <!-- <a href=""><button class="github-link">Github</button></a> -->
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- <section class="detail__section con">
-        
-      </section> -->
+          <div class="project-right detail__section exp">
+            <div>
+              <div class="project-info">
+                <div class="info-name">
+                  <h2>Catch U Landing Page</h2>
+                </div>
+                <div>
+                  <div class="info-detail">
+                    <div class="info-txt">
+                      <p>
+                        랜덤박스 어플 캐치유 랜딩페이지를 의뢰받아 제작하였습니다.<br />
+                        전체 페이지 UI/UX 디자인을 비롯하여 전체 페이지의 클라이언트 구현과
+                        메인의 live 당첨 데이터를 불러오는 서버 구현을 진행하였습니다.
+                      </p>
+                    </div>
+                    <div class="">
+                      <div class="info-skill">
+                        <div>Skill</div>
+                        <div>Next, Context API, SCSS, Tailwind CSS</div>
+                      </div>
+                      <div class="info-role">
+                        <div>Role</div>
+                        <div>Front-end, back-end, UI/UX design</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="project-exp">
+                <div>
+                  <h3>프론트엔드 개발</h3>
+                  <!-- <div class="dev-part">랜딩페이지</div> -->
+                  <div class="dev-item top-in">
+                    <div>모바일 최적화 UI 개발</div>
+                    <ul>
+                      <li>Tailwind와 SCSS를 활용하여 UI 개발</li>
+                      <li>CSS 애니메이션을 활용하여 메인 페이지의 튜토리얼 형식 구현</li>
+                    </ul>
+                  </div>
+                  <div class="dev-item top-in">
+                    <div>메인 페이지 구현</div>
+                    <ul>
+                      <li>Api를 통해 데이터 불러오는 기능 구현</li>
+                      <li>정품 이미지 더보기 기능 구현</li>
+                    </ul>
+                  </div>
+                  <div class="dev-item top-in">
+                    <div>서브 페이지 구현</div>
+                    <ul>
+                      <li>채용, contact 페이지 폼 전송 기능 구현</li>
+                      <li>API를 통해 데이터 불러오는 기능 구현</li>
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                  <h3>백엔드 개발</h3>
+                  <!-- <div class="dev-part">랜딩페이지</div> -->
+                  <div class="dev-item top-in">
+                    <div>Live 데이터 불러오는 API 구현</div>
+                    <ul>
+                      <li>Mysql2 라이브러리를 활용하여 API 구현</li>
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                  <h3>얻게된 점</h3>
+                  <div class="dev-item top-in">
+                    <div>배포 환경에서의 Timezone 차이</div>
+                    <ul>
+                      <li>
+                        live 데이터를 시간에 따라 몇 분, 몇 시간 전에 당첨된 건지 보여줘야 했는데,
+                        로컬에서 실행시 문제가 없었으나 배포하고 나니 시간이 이상하게 출력 되는 현상이 있었습니다.
+                        KST가 UTC와 9시간 차이 난다는 것은 알고 있었지만 로컬과 배포 환경이 다르다는 것을
+                        알게되어 수정하였습니다.
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="dev-item top-in">
+                    <div>Image 최적화</div>
+                    <ul>
+                      <li>
+                        live 데이터를 시간에 따라 몇 분, 몇 시간 전에 당첨된 건지 보여줘야 했는데,
+                        로컬에서 실행시 문제가 없었으나 배포하고 나니 시간이 이상하게 출력 되는 현상이 있었습니다.
+                        KST가 UTC와 9시간 차이 난다는 것은 알고 있었지만 로컬과 배포 환경이 다르다는 것을
+                        알게되어 수정하였습니다.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- <section class="detail__section con">
+          
+        </section> -->
+      </div>
     </div>
   </main>
 </body>

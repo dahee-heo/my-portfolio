@@ -6,82 +6,119 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style/style.css">
   <script defer src="/script/projects.js"></script>
+  <script defer src="/script/components/header.js"></script>
   <title>Heo dahee - project</title>
 </head>
 
 <body>
-  <main>
-    <header></header>
-    <section class="detail__section exp">
-      <div class="project-img">사진?</div>
-      <div class="project-info">
-        <div class="info-name">
-          <h2>With PT</h2>
-        </div>
-        <div>
-          <div class="info-detail">
-            <div class="info-date">
-              <div>Date</div>
-              <div>2023. 06 ~ 현재</div>
-            </div>
-            <div class="info-skill">
-              <div>Skill</div>
-              <div>Next, Redux toolkit, Styled-component</div>
-            </div>
-            <div class="info-role">
-              <div>Role</div>
-              <div>Front-end</div>
+  <main class="project-main">
+    <div class="main-wrap">
+      <header id="header"></header>
+      <div id="nav"></div>
+      <div class="project-wrap">
+        <section class="project-img">
+          <img
+            src="https://images.pexels.com/photos/533446/pexels-photo-533446.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="">
+        </section>
+        <section class="project-con">
+          <div class="project-left">
+            <div class="project-detail">
+              <div class="project-date">
+                <span></span>
+                <div>2023. 06 ~ 현재</div>
+              </div>
+              <div class="link-btn">
+                <!-- <a href="https://catchu.kr/">
+                  <button class="web-link">WEB SITE</button>
+                </a> -->
+                <!-- <a href=""><button class="github-link">Github</button></a> -->
+              </div>
             </div>
           </div>
-          <div class="info-txt">
-            <p>
-              회원과 트레이너간의 커뮤니케이션을 돕는 모바일 웹앱 ㄴ서비스를 제작중입니다.<br />
-              회원 페이지를 담당하여 소셜 로그인, 기록 CRUD 기능 등을 구현하였으며,
-              FCM 알림 및 채팅 기능 등을 구현할 예정입니다.
-            </p>
+          <div class="project-right detail__section exp">
+            <div>
+              <div class="project-info">
+                <div class="info-name">
+                  <h2>With PT</h2>
+                </div>
+                <div>
+                  <div class="info-detail">
+                    <div class="info-txt">
+                      <p>
+                        회원과 트레이너간의 커뮤니케이션을 돕는 모바일 웹앱 서비스를 제작중입니다.<br />
+                        회원 페이지를 담당하여 소셜 로그인, 기록 CRUD 기능 등을 구현하였으며,
+                        FCM 알림 및 채팅 기능 등을 구현할 예정입니다.
+                      </p>
+                    </div>
+                    <div class="">
+                      <div class="info-skill">
+                        <div>Skill</div>
+                        <div>Next, Redux toolkit, Styled-component</div>
+                      </div>
+                      <div class="info-role">
+                        <div>Role</div>
+                        <div>Front-end</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="project-exp">
+                <div>
+                  <h3>회원 페이지</h3>
+                  <!-- <div class="dev-part">랜딩페이지</div> -->
+                  <div class="dev-item top-in">
+                    <div>반응형 UI 개발</div>
+                    <ul>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                  </div>
+                  <div class="dev-item top-in">
+                    <div>메인 페이지 구현</div>
+                    <ul>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                  </div>
+                  <div class="dev-item top-in">
+                    <div>서브 페이지 구현</div>
+                    <ul>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                  <h3>얻게된 점</h3>
+                  <div class="dev-item top-in">
+                    <div>jwt</div>
+                    <ul>
+                      <li>
+                        
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="dev-item top-in">
+                    <div>redux</div>
+                    <ul>
+                      <li>
+                        
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="link-btn">
-          <!-- <a href=""><button class="web-link">Web Site</button></a> -->
-          <a href=""><button class="web-link">Github</button></a>
-        </div>
+        </section>
+        <!-- <section class="detail__section con">
+          
+        </section> -->
       </div>
-    </section>
-    <section class="detail__section con">
-      <div>
-        <h3>개발 항목</h3>
-        <div class="dev-part">회원 페이지</div>
-        <div class="dev-item">
-          <div>반응형 UI 개발</div>
-          <ul>
-            <li>전체 페이지 반응형 UI 개발</li>
-            <li>세부ㅜ 설명</li>
-            <li>세부ㅜ 설명</li>
-            <li>세부ㅜ 설명</li>
-            <li>세부ㅜ 설명</li>
-            <li>세부ㅜ 설명</li>
-            <li>세부ㅜ 설명</li>
-            <li>세부ㅜ 설명</li>
-          </ul>
-        </div>
-      </div>
-      <div>
-        <h3>배운점</h3>
-        <div class="dev-item">
-          <div>배운점 1</div>
-          <ul>
-            <li>배운점 세부 항목</li>
-            <li>배운점 세부 항목</li>
-            <li>배운점 세부 항목</li>
-            <li>배운점 세부 항목</li>
-            <li>배운점 세부 항목</li>
-            <li>배운점 세부 항목</li>
-            <li>배운점 세부 항목</li>
-            <li>배운점 세부 항목</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    </div>
   </main>
 </body>
 
