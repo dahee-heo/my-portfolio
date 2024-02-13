@@ -23,6 +23,7 @@ main {
 
   @media (max-width: 768px) {
     padding: 0 1.25rem;
+    margin: 2rem 0;
   }
 }
 
@@ -122,9 +123,17 @@ main {
   }
 
   @media (max-width: 768px) {
+    &__wrap {
+      padding: 2rem;
+    }
     .intro-txt {
       font-size: var(--font-m-heading);
       // word-break: break-all;
+    }
+    .intro-bottom {
+      p {
+        font-size: var(--font-m-body1);
+      }
     }
   }
 }
@@ -140,11 +149,6 @@ main {
     height: 100%;
     padding: 0 var(--gap);
   }
-
-  // .section-tit {
-  //   color: var(--white);
-  //   margin-bottom: 5rem;
-  // }
 
   .about-profile {
     width: 100%;
@@ -292,6 +296,9 @@ main {
   }
 
   @media (max-width: 768px) {
+    &__wrap {
+      padding: 0;
+    }
     .about-profile {
       grid-template-columns: 1fr;
       > div {
@@ -302,9 +309,17 @@ main {
         height: 20rem;
         border-radius: var(--box-radius);
       }
+
+      .profile-right {
+        padding: 1.5rem;
+        font-size: var(--font-m-body1);
+      }
     }
     .about-contact {
       flex-direction: column;
+      > div {
+        padding: 1.5rem;
+      }
     }
   }
 }
@@ -327,6 +342,9 @@ main {
   @media (max-width: 768px) {
     div {
       font-size: var(--font-m-heading);
+    }
+    p {
+      font-size: var(--font-m-body1);
     }
   }
 }
@@ -452,6 +470,7 @@ main {
       .skill-list { 
         .skill-item {
           flex-direction: column;
+          padding: 1.5rem;
           > div {
             width: 100%;
           }
@@ -475,6 +494,18 @@ main {
           // margin-bottom: 0;
         }
       }
+    }
+    .skill-name {
+      font-size: var(--font-m-title);
+    }
+    .skill-degree {
+      font-size: 0.825rem;
+      span {
+        padding: 0.375rem
+      }
+    }
+    .skill-exp {
+      font-size: var(--font-m-body1);
     }
   }
   .rolling {
@@ -644,6 +675,14 @@ main {
         .works-img {
           display: block;
         }
+        > a {
+          .works-info-name {
+            font-size: var(--font-m-title);
+          }
+          .works-info-date {
+            font-size: var(--font-m-body2);
+          }
+        }
       }
     }
   }
@@ -708,6 +747,7 @@ main {
     > div:first-child {
       font-size: 1.25rem;
       display: flex;
+      align-items: center;
       gap: 0.25rem;
       // font-weight: var(--font-bold);
     }
@@ -750,6 +790,25 @@ main {
   .education {
     background-color: var(--gray50);
   }  
+  @media (max-width: 768px) { 
+    .career-list-item {
+      padding: 1.75rem;
+      width: 13rem;
+    }
+    .career-info {
+      > div:first-child {
+        font-size: var(--font-m-body2);
+        flex-wrap: wrap;
+        // align-items: start;
+      }
+      > div:last-child {
+        font-size: var(--font-m-title);
+      }
+    }
+    .career-exp {
+      font-size: var(--font-m-body1);
+    }
+  }
 }
 
 .contact-section {
