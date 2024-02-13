@@ -26,6 +26,8 @@
   display: flex;
   padding: var(--gap) 0;
   gap: var(--gap);
+
+ 
 }
 
 .project-left {
@@ -55,9 +57,8 @@
   width: 100%;
   background-color: var(--white);
   border-radius: var(--box-radius);
-  padding: 1.25rem 2rem;
+  padding: 1rem;
   font-size: var(--font-body1);
-  font-family: var(--nunito);
   display: flex;
   gap: var(--gap);
   align-items: center;
@@ -79,10 +80,11 @@
   
   button {
     width: 100%;
-    padding: 1.25rem 2rem;
-    border-radius: 2rem;
+    padding: 1rem;
+    border-radius: var(--box-radius);
     font-size: var(--font-body1);
     cursor: pointer;
+    margin-bottom: var(--gap);
     
   }
   .web-link {
@@ -124,7 +126,42 @@
     }
   }
   .github-link {
-    border: 1px solid var(--black);
+    position: relative;
+    overflow: hidden;
+    background-color: var(--gray800);
+    color: var(--white);
+    z-index: 1;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+    }
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background-color: var(--black);
+      transition: all .3s;
+      border-radius: 10rem;
+      z-index: -1;
+    }
+
+    &:hover {
+
+      &::after {
+        width: 100%;
+      }
+    }
   }
 
 }
@@ -141,7 +178,7 @@
 
     li {
       padding: 1rem 1.5rem;
-      border-radius: 2rem;
+      border-radius: var(--box-radius);
       border: 1px solid var(--black);
     }
   }
@@ -161,12 +198,21 @@
       width: 100%;
       height: 10rem;
       background-color: aquamarine;
-      border-radius: 1rem;
+      border-radius: var(--box-radius);
     }
   }
 }
 
-
+@media (max-width: 768px) {
+  .project-con{
+    flex-direction: column;
+  }
+  .project-left {
+    width: 100%;
+    position: static;
+    height: auto;
+  }
+}
 
 
 /* Project detail
@@ -206,8 +252,12 @@
     font-weight: var(--font-thin);
     margin-bottom: 2rem;
   }
+  .necessity {
+    color: var(--primary-purple);
+    font-weight: var(--font-regular);
+  }
 
-  @media (max-width: 960px) {
+  @media (max-width: 768) {
     > div:nth-child(2) {
       flex-direction: column;
     }
@@ -253,7 +303,7 @@
   }
   
   .dev-part {
-    font-size: var(--title-1);
+    font-size: var(--font-body1);
     font-weight: var(--font-bold);
     color: var(--primary-purple);
     margin-bottom: 1.5rem;
@@ -281,6 +331,10 @@
         top: 0.5rem;
       }
       
+    }
+    a {
+      color: var(--primary-purple);
+      text-decoration: underline;
     }
     li {
       max-width: 54rem;

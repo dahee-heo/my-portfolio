@@ -9,7 +9,7 @@ import {
   worksSection,
   careerSection,
   careerSectionWrap,
-  contactSection,
+  // contactSection,
   profileLeft,
   worksItems,
   careerList,
@@ -27,116 +27,154 @@ import {
   careerSectionTop,
   careerSectionRect,
   skillSectionTop,
-  contactSectionTop,
+  // contactSectionTop,
   careerSectionBottom,
   aboutSectionBottom,
   skillSectionBottom
 } from "./constants.js";
 
 
+const works = [
+  {
+    id: 1,
+    cate: 'Next',
+    date: '2023. 11',
+    title: 'Catch U Landing page',
+    subText: '랜덤박스 서비스 캐치유 랜딩페이지 입니다.',
+    src: '/assets/images/project_thumb1.png',
+  },
+  {
+    id: 2,
+    cate: 'Next',
+    date: '2023. 06',
+    title: 'With-PT',
+    subText: '트레이너와 회원간 커뮤니케이션 모바일 웹 서비스를 구현중입니다.',
+    src: '/assets/images/project_thumb2.png',
+  },
+  {
+    id: 3,
+    cate: 'Svelte kit',
+    date: '2023. 06',
+    title: 'Mnworks',
+    subText: '스틸시리즈(SteelSeries) 국내 총판 업체 mnworks의 공식 사이트 및 관리자 페이지 입니다.',
+    src: '/assets/images/project_thumb3.png',
+  },
+  {
+    id: 4,
+    cate: 'Svelte kit',
+    date: '2023. 06',
+    title: '대전청인설비공사',
+    subText: '누수공사 전문업체인 대전청인설비공사의의 공식 사이트 및 관리자 페이지 입니다.',
+    src: '/assets/images/project_thumb4.png',
+  },
+  {
+    id: 5,
+    cate: 'Next',
+    date: '2023. 06',
+    title: 'Geoinfotech',
+    subText: '마이크로 킥보드 한국 공식 수입사 지오인포테크의 정품등록 페이지 입니다.',
+    src: '/assets/images/project_thumb5.png',
+  },
+  {
+    id: 6,
+    cate: 'React',
+    date: '2023. 01',
+    title: 'LG My-car alram service',
+    subText: 'TV - 차량 기기 연동 서비스입니다. 프로바이더 웹, 모바일 웹, 관리자용 페이지 총 세 도메인으로 나뉘어 있습니다.',
+    src: '/assets/images/project_thumb6.png',
+  },
+  {
+    id: 7,
+    cate: 'React',
+    date: '2022. 05',
+    title: 'Stamp',
+    subText: '직원 출결관리 서비스입니다. 직원용 페이지 및 관리자용 페이지로 나뉘어 있습니다.',
+    src: '/assets/images/project_thumb7.png',
+  },
+  {
+    id: 8,
+    cate: 'React',
+    date: '2021. 11',
+    title: 'Cat-expiry',
+    subText: '고양이 식료품 유통기한을 관리할 수 있는 모바일 웹 서비스 입니다.',
+    src: '/assets/images/project_thumb8.png',
+  },
+]
 
-const careerX = 0;
-function sectionAboutEvent(scrollY) {
-  aboutSectionWrap.style.transform = `translate3d(0, ${scrollY - window.innerHeight}px, 0)`
-  
-  const position = scrollY - aboutSectionTop;
-  const onePoint = Math.ceil(aboutSectionRect.height / 5 * 1)
-  const twoPoint = Math.ceil(aboutSectionRect.height / 5 * 2)
-  const threePoint = Math.ceil(aboutSectionRect.height / 5 * 3)
+let innerWorks = works.map(ele => `
+<a href="/pages/project${ele.id}.html" data-id="${ele.id}">
+<div class="works-img works-img-m"><img src="${ele.src}"/></div>
+<div class="works-info">
+<div class="works-info-date">
+<div>${ele.cate}</div>
+<div>${ele.date}</div>
+</div>
+<div class="works-info-name">${ele.title}</div>
+<div class="works-info-exp">${ele.subText}</div>
+</div>
+</a>
+`)
 
-  const textOpacity = (idx) => {
-    aboutText[0].style.opacity = 0.5;
-    aboutText[1].style.opacity = 0.5;
-    aboutText[2].style.opacity = 0.5;
+const htmlConvert = (inner) => {
+  let innerWorks = inner.map(ele => `
+  <a href="/pages/project${ele.id}.html" data-id="${ele.id}">
+  <div class="works-img works-img-m"><img src="${ele.src}"/></div>
+  <div class="works-info">
+  <div class="works-info-date">
+  <div>${ele.cate}</div>
+  <div>${ele.date}</div>
+  </div>
+  <div class="works-info-name">${ele.title}</div>
+  <div class="works-info-exp">${ele.subText}</div>
+  </div>
+  </a>
+  `)
 
-    if (idx) {
-      const i = Number(idx)
-      aboutText[i].style.opacity = 1;
-    }
-  }
-  let y;
-  if (position < onePoint) {
-    textOpacity('0');
-  } else if (position > onePoint && position < twoPoint) {
-    textOpacity('1');
-  } else if (position > twoPoint && position < threePoint) {
-    textOpacity('2');
-  } else if (position > threePoint) {
-    y = threePoint
-    for ( let i = 0; i < threePoint; i++) {
-      y - i
-    }
-    aboutSectionWrap.style.transform = `translate3d(0, ${y}px, 0)`
+  return innerWorks
+}
+const worksList = document.querySelector('.works-right')
+worksList.innerHTML = innerWorks.join('');
+const worksCate = document.querySelectorAll('.works-cate > div');
+
+const worksFilter = (idx) => {
+  if (idx === 1) {
+    const nextFilter = works.filter(ele => {
+      return ele.cate === 'Next'
+    })
+
+    const result = htmlConvert(nextFilter)
+    worksList.innerHTML = result.join('');
+
+  } else if (idx === 2) {
+    const reactFilter = works.filter(ele => {
+      return ele.cate === 'React'
+    })
+    const result = htmlConvert(reactFilter)
+    worksList.innerHTML = result.join('');
+  } else if (idx === 3) {
+    const svelteFilter = works.filter(ele => {
+      return ele.cate.includes('Svelte')
+    })
+    const result = htmlConvert(svelteFilter)
+    worksList.innerHTML = result.join('');
   } else {
-    textOpacity();
+    const all = works.filter(ele => {
+      return ele
+    })
+    const result = htmlConvert(all)
+    worksList.innerHTML = result.join('');
   }
-
 }
 
-
-function sectionCareerEvent(scrollY) {
-    
-  const position = scrollY - careerSectionTop;
-  const threePoint = Math.ceil(careerSectionRect.height / 5 * 3)
-  
-  let y;
-  let careerX = y
-  // console.log('x: ', x);
-  
-  if (position < threePoint) {
-    y = Math.ceil(scrollY - careerSectionTop);
-  } else {
-    y = threePoint
-    for ( let i = 0; i < threePoint; i++) {
-      y - i
-    }
-    careerSectionWrap.style.transform = `translate3d(0, ${y}px, 0)`
-  } 
-  // console.log('y: ', y);
-  careerSectionWrap.style.transform = `translate3d(0, ${y}px, 0)`
-  careerList.style.transform = `translate3d(-${y}px, 0, 0)`
-
-
-}
-
-const scaleIn = (elements) => {
-  elements.forEach((item) => {
-    item.style.opacity = '1'
-    item.style.animation = 'scaleIn 1s ease-out'
-  })
-}
-
-function mainColor() {
-  const scrollTop = window.scrollY;
-  skillItems.forEach((item) => {
-    item.style.opacity = '0'
-  })
-  
-  const veiwPoint = window.innerHeight / 5;
-
-  if (scrollTop < aboutSectionTop - veiwPoint) {
-    main.style.backgroundColor = black;
-  } else if (scrollTop > aboutSectionTop - veiwPoint 
-    && scrollTop < skillSectionTop - veiwPoint) {
-    main.style.backgroundColor = violet;
-  } else if (scrollTop > skillSectionTop - veiwPoint) {
-    main.style.backgroundColor = white;
-    // scaleIn(skillItems)
-  } else if (scrollTop < contactSectionTop - veiwPoint) {
-    main.style.backgroundColor = black;
-  }
-  
-  // console.log('skillSectionTop + veiwPoint: ', skillSectionTop + veiwPoint);
-  // if (scrollTop > skillSectionTop + veiwPoint) {
-  //   main.style.backgroundColor = white;
-
-  // }
-}
+worksCate.forEach((ele, idx) => {
+  ele.addEventListener('click', () => worksFilter(idx))
+})
 
 const topIn = document.querySelectorAll('.top-in')
+
 const onScroll = () => {
   const scrollTop = window.scrollY;
-  
+
   topIn.forEach((ele, idx) => {
     ele.style.opacity = '0';
     if (ele.getBoundingClientRect().top < window.innerHeight) {
@@ -144,83 +182,16 @@ const onScroll = () => {
       ele.style.opacity = '1';
     }
   })
-  // mainColor()
-  // let bodyScrollTop = document.body.scrollTop;
-  if (scrollTop < aboutSectionTop) {
-    main.style.backgroundColor = violetBg;
-  } else if (scrollTop > aboutSectionTop && scrollTop < careerSectionTop) {
-    main.style.backgroundColor = black;
-  } 
-  // else if (scrollTop > careerSectionTop) {
-    
-  //   main.style.backgroundColor = violet;
-  // }
-  // let elementScrollTop = document.documentElement.scrollTop;
-  // let elementScrollHeight = document.documentElement.scrollHeight;
-  // let elementClientHeight = document.documentElement.clientHeight;
-  // let scrollpercent = (bodyScrollTop + elementScrollTop) / (elementScrollHeight - elementClientHeight);
-  // const aboutHeight = aboutSectionRect.height;
-
-  //about section
-  // if (scrollTop < aboutSectionTop) {
-  //   //글씨 fade
-  // } else {
-  // }
-
-  // if (scrollTop > aboutSectionTop && scrollTop < aboutSectionBottom) {
-  //   sectionAboutEvent(scrollTop)
-  // }  
-  
-  // if (scrollTop > skillSectionTop && scrollTop < skillSectionBottom) {
-  //   scaleIn(skillItems)
-  // } else {
-  //   // skillItems.forEach((item) => {
-  //   //   item.style.opacity = '0'
-  //   // })
-  // }
-
-  // if (worksSection.getBoundingClientRect().top < 100) {
-  //   // main.style.backgroundColor = violetBg
-  //   scaleIn(worksItems)
-  // } else {
-  //   worksItems.forEach((item) => {
-  //     item.style.opacity = '0'
-  //   })
-  // }
-
-  if (window.scrollY > careerSectionTop && window.scrollY < careerSectionBottom) {
-    let x = window.scrollY - careerSectionTop
-    console.log('x: ', x);
-    
-    careerList.style.transform = `translate3d(-${x}px, 0, 0)`
-  }
-
-  // if (scrollTop > careerSectionTop && scrollTop < careerSectionBottom) {
-  //   sectionCareerEvent(scrollTop)
-  // } else if (scrollTop < careerSectionTop) {
-  //   careerList.style.transform = `translate3d(0, 0, 0)`
-  // }
 }
 
 window.addEventListener('scroll', onScroll)
 
-
-
-
-
-
-
-
-
-// worksItems.forEach(item => {
-//   item.addEventListener('mousemove', (event) => {
-//     const mouseY = event.clientY
-//     const mouseX = event.clientX
-
-//     const moreCursor = document.querySelector('.more-cursor')
-//     moreCursor.style.display = 'block';
-//     moreCursor.style.top = mouseY + 'px';
-//     moreCursor.style.left = mouseX + 'px';
-
-//   })
-// })
+const worksA = document.querySelectorAll('.works-right > a')
+const WorksImg = document.querySelector('.works-img')
+WorksImg.innerHTML = `<img src='/assets/images/project_thumb1.png'/>`
+worksA.forEach(item => {
+  item.addEventListener('mouseover', () => {
+    const id = works.find(ele => ele.id == item.dataset.id)
+    WorksImg.innerHTML = `<img src='/assets/images/project_thumb${id.id}.png'/>`
+  })
+})

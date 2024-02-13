@@ -38,10 +38,10 @@ export const careerList = document.querySelector('.career-list')
 export const careerItems = document.querySelectorAll('.career-list-item')
 
 //contact section
-export const contactSection = document.querySelector('.contact-section');
-export const contactSectionRect = contactSection.getBoundingClientRect();
-export const contactSectionTop = contactSectionRect.top + window.scrollY;
-export const contactSectionBottom = contactSectionRect.bottom + window.scrollY;
+// export const contactSection = document.querySelector('.contact-section');
+// export const contactSectionRect = contactSection.getBoundingClientRect();
+// export const contactSectionTop = contactSectionRect.top + window.scrollY;
+// export const contactSectionBottom = contactSectionRect.bottom + window.scrollY;
 
 // style
 export const root = document.querySelector(':root');
