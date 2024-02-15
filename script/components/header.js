@@ -42,3 +42,14 @@ headerEle.addEventListener('click', () => {
     nav.classList.remove('show')
   }
 })
+
+const navList = document.querySelectorAll('.nav-list a')
+navList.forEach(list => {
+  list.addEventListener('click', () => {
+    nav.classList.remove('show');
+    click = false;
+    spans[0].style.transform = 'rotate(0) translate3d(0, 0, 0)'
+    spans[1].style.opacity = '1'
+    spans[2].style.transform = 'rotate(0) translate3d(0, 0, 0)'
+  })
+})
